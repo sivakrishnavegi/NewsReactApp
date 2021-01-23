@@ -1,3 +1,4 @@
+require("dotenv").config()
 import React, { Component } from "react";
 import { MDBBtn, MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import "./index.css";

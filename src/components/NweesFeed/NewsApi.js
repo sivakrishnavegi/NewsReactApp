@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
-
+require("dotenv").config()
 const NewsApi = () => {
      const [responseData, setResponseData] = useState([])
-
+ console.log(process.env.API_KEY)
         useEffect(() => {
-            axios.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=c4902d82b7a94d80bc4d6819459af2a7')
+            axios.get(process.env.REACT_APP_API_URL)
             .then(res => {
                 console.log(res)
                 setResponseData(
